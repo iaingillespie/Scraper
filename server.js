@@ -2,6 +2,9 @@ var express = require ("express");
 var htmlRoutes = require("./routes/htmlRoutes");
 var apiRoutes = require("./routes/apiRoutes")
 var app = express();
+const mongoose = require('mongoose');
+ 
+mongoose.connect('mongodb://localhost/scraper');
 
 app.use(express.static("public"));
 
